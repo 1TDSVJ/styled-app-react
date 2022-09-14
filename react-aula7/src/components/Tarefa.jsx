@@ -2,8 +2,7 @@ import React from 'react';
 import {DivTarefa} from '../style/styled'
 
 
-
-function Tarefas = props=>{
+export default function Tarefas(props) {
   return (
     <DivTarefa>
         <h2>{props.titulo}</h2>
@@ -12,5 +11,3 @@ function Tarefas = props=>{
     </DivTarefa>
   )
 }
-
-export default Tarefas;

@@ -1,16 +1,14 @@
-import React from 'react';
-import './index.css';
+import React from 'react'
+import './App.css'
 import ListaTarefas from './components/ListaTarefas'
 
-
-
 function App() {
-  return(
-     <div>
-        <h1>Estudo com Styled-Components</h1>
-        <ListaTarefas/>
-     </div>
-    )
+  return (
+    <div>
+      <h1>ESTUDO COM STYLED-COMPONENTS</h1>
+      <ListaTarefas/>
+    </div>
+  )
 }
 
-export default App;
+export default App 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Tarefas from './Tarefa'
+import Tarefa from './Tarefa'
 import {DivLista} from '../style/styled'
 
-function ListaTarefas=()=>{
+export default function ListaTarefas() {
   const [tarefa,setTarefa]=useState([{
     titulo:'Lista de Pagamento',
     setor:'Depto. Vendas',
@@ -26,5 +26,3 @@ function ListaTarefas=()=>{
     </DivLista>
   )
 }
-
-export default ListaTarefas;
