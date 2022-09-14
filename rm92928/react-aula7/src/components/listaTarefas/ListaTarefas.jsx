@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { DivLista } from '../../style/styled';
+import FormTarefas from '../formTarefas/FormTarefas';
 // import styled from 'styled-components';
 import Tarefa from '../tarefa/Tarefa';
 
@@ -27,15 +28,36 @@ export default function ListaTarefas() {
 
 ]);
 
-const addTarefa = () => {
-  const novaTarefa = {
-    titulo: 'Planilha de Salários',
-    setor: 'Dep. Pessoal',
-    descricao: 'Gerar Planilhas'
+const [nTarefa, setNTarefa] = useState({
+  titulo:'', setor:'', descricao:'',})
+
+const addTarefa = e => {
+  e.preventDefault()
+
+  setNTarefa({titulo:'', setor:'', descricao:'',})
+}
+
+  const captura = e => {
+    const {value, name} = e.target
+
+    if (name === 'titulo') {
+      setNTarefa({'titulo': value, 'setor': nTarefa.setor, 'descricao': nTarefa.descricao})
+    } else if (name === 'setor') {
+      setNTarefa({'titulo': nTarefa.titulo, 'setor': value, 'descricao': nTarefa.descricao})
+    } else if (name === 'descricao') {
+      setNTarefa({'titulo': nTarefa.titulo, 'setor': nTarefa.setor, 'descricao': value})
+    }
   }
 
-  setTarefa([...tarefa, novaTarefa])
-}
+
+  // const novaTarefa = {
+  //   titulo: 'Planilha de Salários',
+  //   setor: 'Dep. Pessoal',
+  //   descricao: 'Gerar Planilhas'
+  // }
+
+  // setTarefa([...tarefa, novaTarefa])
+
 
   return (
 
@@ -46,7 +68,9 @@ const addTarefa = () => {
   //   </DivLista>
 
   <DivLista>
-
+    <FormTarefas 
+      addTarefa={addTarefa} tarefa={nTarefa} digit={captura}
+    />
     {tarefa.map((tar, i)=>(
       <Tarefa
         key={i}

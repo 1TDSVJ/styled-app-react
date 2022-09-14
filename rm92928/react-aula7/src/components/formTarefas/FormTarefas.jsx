@@ -1,8 +1,9 @@
 import React from 'react'
+import { DivForm } from '../../style/styled'
 
 export default function FormTarefas(props) {
   return (
-    <div>
+    <DivForm>
         <form method='POST' onSubmit={props.addTarefa}>
             <div>
                 <input name='titulo' placeholder='Título' value={props.tarefa.titulo} onChange={props.digiit} />
@@ -15,6 +16,6 @@ export default function FormTarefas(props) {
             </div>
             <button type='submit'>Adicionar</button>
         </form>
-    </div>
+    </DivForm>
   )
 }
