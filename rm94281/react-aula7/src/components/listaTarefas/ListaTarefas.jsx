@@ -1,5 +1,12 @@
 import React from 'react';
+import Tarefa from '../tarefa/Tarefa';
 
 export default function ListaTarefas() {
-  return <div>ListaTarefas</div>;
+  return (
+    <div>
+      <Tarefa />
+      <Tarefa />
+      <Tarefa />
+    </div>
+  );
 }
