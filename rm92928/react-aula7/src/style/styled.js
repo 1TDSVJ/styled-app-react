@@ -11,7 +11,6 @@ export const DivTarefa = styled.div`
     margin: 10px;
     h2,p{ padding-bottom: 10px; }
 `
-
 export const DivLista = styled.div`
     width: 100%;
     padding: 20px;
