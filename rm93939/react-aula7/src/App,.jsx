@@ -4,8 +4,8 @@ import ListaTarefas from "./components/listaTarefas/ListaTarefas";
 const App =()=> {
   return (
     <div>
-      <h1>ESTUDO COM STULED_COMPONENTS</h1>
-      <ListaTarefas />
+      <h1>ESTUDO COM STULED-COMPONENTS</h1>
+      <ListaTarefas/>
     </div>
   );
 }

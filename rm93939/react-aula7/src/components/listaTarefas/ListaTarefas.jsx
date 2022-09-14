@@ -1,9 +1,12 @@
 import React from "react"
+import Tarefa from "../terefa/Tarefa"
 
 const ListaTarefas = () => {
     return(
         <div>
-            <p>Lista de Tarefas</p>
+            <Tarefa />
+            <Tarefa />
+            <Tarefa />
         </div>
     )
 }
