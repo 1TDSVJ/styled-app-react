@@ -1,14 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
-
-import React from 'react';
+import Tarefa from '../tarefa/Tarefa'
 
 
 export default function listaTarefas() {
   return (
     <div>
 
-      <p>Lista de Tarefas</p>
+      <Tarefa/>
+      <Tarefa/>
+      <Tarefa/>
 
     </div>
   )
