@@ -1,4 +1,18 @@
 import React from "react"
+import styled from "styled-components"
+
+const DivForm = styled.div`
+    width: 100%;
+    padding: 20px;
+    background-color: #993;
+
+    form{width:50%; margin: auto;}
+    form input, form textarea{padding:5px; width:80%;}
+    form textarea{height: 80px;}
+    form button{padding:10px; background: #3c3; color:#fff;}
+`
+
+
 
 const FormTarefas = props=>{
     
@@ -19,3 +33,4 @@ const FormTarefas = props=>{
         </div>
     )
 }
+export default FormTarefas;
