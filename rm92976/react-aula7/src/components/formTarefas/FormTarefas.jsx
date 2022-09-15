@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import React from 'react'
 
 const DivForm = styled.div`
 width: 100%;
@@ -16,14 +17,23 @@ export default function FormTarefas(props){
 
     return (
         <div>
-            <form method="post" onSubmit={props.addTarefa}>
+            <form method="post" onSubmit={props.funcaoAddTarefa}>
                 <div>
-                    <input name="titulo" placeholder="Titulo" value={props.tarefa.titulo}
-                    onChange={props.digit}/>
+                <label > Titulo</label>
+                    <input name="titulo" type="text "placeholder="Titulo" value={props.novaTarefa.titulo}
+                    onChange={props.funcaoCaptura} />
+                    
                 </div>
                 <div>
+                    <label >Setor</label>
+                    <input name="setor" type="text "placeholder="Setor" value={props.novaTarefa.setor}
+                   onChange={(props.oQueFoiDigitado)}/>
+                </div>
+                <div>
+                    <label>Descrição</label>
                     <textarea name="descricao" placeholder="Descrição"
-                    value={props.tarefa.descricao} onChange={props.digit}></textarea>
+                  cols="30" rows="10" value={props.novaTarefa.descricao}
+                  onChange={props.oQueFoiDigitado}></textarea>
                 </div>
                 <button type="submit">Adicionar</button>
             </form>

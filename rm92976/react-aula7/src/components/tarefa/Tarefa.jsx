@@ -1,7 +1,7 @@
 import React from 'react';
 import {FaTrashAlt as X} from "react-icons/fa";
 
-import {DivTarefa} from '../../style/styled';
+import {Botao, DivTarefa} from '../../style/styled';
 
 
 // const DivTarefa = styled.div`
@@ -24,10 +24,10 @@ import {DivTarefa} from '../../style/styled';
 export default function Tarefa(props){
     return(
         <DivTarefa>
-            <h1>{props.titulo}</h1>
-            <p>Para:{props.setor}</p>
-            <p>{props.descricao}</p>
-            <button onClick={props.remove}>X</button>
+            <h2>{props.tituloProps}</h2>
+            <p>Para:{props.setorProps}</p>
+            <p>{props.descricaoProps}</p>
+            <Botao>Fechar</Botao>
         </DivTarefa>
     )
 }
