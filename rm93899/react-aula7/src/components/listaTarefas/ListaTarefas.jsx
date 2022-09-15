@@ -1,7 +1,8 @@
 import React from 'react'
 import { DivLista } from '../../style/styled'
 import Tarefa from '../tarefa/Tarefa'
-import { useState } from 'react'
+
+
 
 
 export default function listaTarefas() {
