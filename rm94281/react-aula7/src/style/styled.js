@@ -8,6 +8,17 @@ export const DivLista = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  .btnAdd {
+    display: block;
+    height: 5vh;
+    border-radius: 5px;
+    padding: 1vh 2vw;
+    margin: auto;
+    border: solid 2px #00ff00;
+    color: #00ff00;
+    font-size: 1.5rem;
+  }
 `;
 
 export const DivTarefa = styled.div`
@@ -23,4 +34,16 @@ export const DivTarefa = styled.div`
   p {
     padding-bottom: 10px;
   }
+
+`;
+
+export const Botao = styled.button`
+  display: block;
+  border-radius: 5px;
+  padding: vh 2vw;
+  margin: auto;
+  border: solid 2px #00ff00;
+  color: #00ff00;
+  font-size: 1.5rem;
+
 `;
