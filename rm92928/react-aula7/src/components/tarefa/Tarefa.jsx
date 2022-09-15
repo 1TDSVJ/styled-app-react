@@ -1,6 +1,6 @@
 import React from 'react';
 // import styled from 'styled-components';
-import { DivTarefa } from '../../style/styled';
+import { Botao, DivTarefa } from '../../style/styled';
 
 // const DivTarefa = styled.div`
 // background-color: #ffb;
@@ -20,6 +20,7 @@ export default function Tarefa(props) {
       <h2>{props.titulo}</h2>
       <p>{props.setor}</p>
       <p>{props.descricao}</p>
+      <Botao onClick={props.remove}>X</Botao>
     </ DivTarefa>
   )
 }

@@ -29,24 +29,43 @@ export default function ListaTarefas() {
 ]);
 
 const [nTarefa, setNTarefa] = useState({
-  titulo:'', setor:'', descricao:'',})
+  titulo:'', setor:'', descricao:''})
 
-const addTarefa = e => {
-  e.preventDefault()
+  //ADD-TAREFA
+  const addTarefa = (e)=>{
+    e.preventDefault()
+    
+    //Adicionando uma nova tarefa
+    setNTarefa({titulo:"",setor:"",descricao:""})
 
-  setNTarefa({titulo:'', setor:'', descricao:'',})
-}
+    // const novaTarefa = {
+    //   titulo : "Planilha de Notas",
+    //   setor : "Dep. Graduação",
+    //   descricao : "Lançar notas."
+    // }
 
-  const captura = e => {
-    const {value, name} = e.target
+    //ADICIONANDO MAIS UMA TAREFA A LISTA DE TAREFAS
+    // setTarefa([...tarefa, novaTarefa])
+  }
 
-    if (name === 'titulo') {
-      setNTarefa({'titulo': value, 'setor': nTarefa.setor, 'descricao': nTarefa.descricao})
-    } else if (name === 'setor') {
-      setNTarefa({'titulo': nTarefa.titulo, 'setor': value, 'descricao': nTarefa.descricao})
-    } else if (name === 'descricao') {
-      setNTarefa({'titulo': nTarefa.titulo, 'setor': nTarefa.setor, 'descricao': value})
+  //FUNÇÃO DE CAPTURA DOS DADOS DO FORM
+  const captura = (e)=>{
+    const {value,name} = e.target
+
+    if(name === "titulo"){
+      setNTarefa({titulo: value, setor: nTarefa.setor , descricao: nTarefa.descricao})
+    }else if(name === "setor"){
+      setNTarefa({titulo: nTarefa.titulo, setor: value , descricao: nTarefa.descricao})
+    }else if(name === "descricao"){
+      setNTarefa({titulo: nTarefa.titulo, setor: nTarefa.setor , descricao: value})
     }
+
+  }
+
+  const removerTarefa = tar => {
+    let lista = tarefa
+    lista = lista.filter(t => t !== tar)
+    setTarefa(lista)
   }
 
 
@@ -68,18 +87,18 @@ const addTarefa = e => {
   //   </DivLista>
 
   <DivLista>
-    <FormTarefas 
-      addTarefa={addTarefa} tarefa={nTarefa} digit={captura}
-    />
+    <FormTarefas addTarefa={addTarefa} tarefa={nTarefa} 
+      digit={captura}/>
     {tarefa.map((tar, i)=>(
       <Tarefa
         key={i}
         titulo={tar.titulo}
         setor={tar.setor}
         descricao={tar.descricao}
+        remove={removerTarefa.bind(this, tar)}
       />
     ))}
-    <button onClick={addTarefa}>Adicionar</button>
+    {/* <button onClick={addTarefa}>Adicionar</button> */}
   </ DivLista>
   )
 }

@@ -6,13 +6,13 @@ export default function FormTarefas(props) {
     <DivForm>
         <form method='POST' onSubmit={props.addTarefa}>
             <div>
-                <input name='titulo' placeholder='Título' value={props.tarefa.titulo} onChange={props.digiit} />
+                <input name='titulo' placeholder='Título' value={props.tarefa.titulo} onChange={props.digit} />
             </div>
             <div>
-                <input name='setor' placeholder='Setor' value={props.tarefa.setor} onChange={props.digiit} />
+                <input name='setor' placeholder='Setor' value={props.tarefa.setor} onChange={props.digit} />
             </div>
             <div>
-                <input name='desrcicao' placeholder='Descrição' value={props.tarefa.desrcicao} onChange={props.digiit} />
+                <input name='descricao' placeholder='Descrição' value={props.tarefa.descricao} onChange={props.digit} />
             </div>
             <button type='submit'>Adicionar</button>
         </form>
