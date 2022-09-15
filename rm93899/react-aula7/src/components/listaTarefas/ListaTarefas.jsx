@@ -28,18 +28,26 @@ export default function ListaTarefas() {
     } else if(name === 'descricao') {
       setNTarefa({'titulo':nTarefa.titulo, 'setor':nTarefa.setor, 'descricao':value})
     }
+  }
 
+  const removerTarefa = tar=> {
+    let lista = tarefa
+    lista = lista.filter((t) => t !== tar)
+    setTarefa(lista)
   }
 
   return (
     <DivLista>
-      {tarefa.map((tar, i) => (
-        <Tarefa
-          key={i}
-          titulo={tar.titulo}
-          setor={tar.setor}
-          descricao={tar.descricao}
-          />
+        <FormTarefas addTarefa={addTarefa} tarefa={nTarefa}
+        digit={captura}/>
+        {tarefa.map((tar, i) => (
+          <Tarefa
+            key={i}
+            titulo={tar.titulo}
+            setor={tar.setor}
+            descricao={tar.descricao}
+            remove={removerTarefa.bind(this,tar)}
+            />
       ))}
     </DivLista>
   )

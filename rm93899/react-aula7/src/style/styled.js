@@ -11,7 +11,9 @@ export const DivTarefa = styled.div`
     width: 350px;
     height: 200px;
     margin: 10px;
+    position: relative;
     h2,p{ padding-bottom: 10px; }
+    button{position: absolute; bottom: 10px; right: 10px;}
 `
 export const DivLista = styled.div`
     width: 100%;
