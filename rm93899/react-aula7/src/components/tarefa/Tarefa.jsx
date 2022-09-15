@@ -9,15 +9,8 @@ export default function Tarefa() {
         <h2>{props.titulo}</h2>
         <p>Para: {props.setor}</p>
         <p>{props.descricao}</p>
+        <button onClick={props.remove}>X</button>
       </DivTarefa>
     )
   }
-  
-  return (
-    <DivTarefa>
-        <h2>Relatório de Vendas</h2>
-        <p>Para: Departamento de vendas</p>
-        <p>Levantar os valores de vendas deste mês.</p>
-    </DivTarefa>
-  )
 }
