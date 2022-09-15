@@ -28,7 +28,7 @@ const FormTarefas = props=>{
                 <div>
                     <input name="descricao" placeholder="Descrição" value={props.tarefa.descricao} onChange={props.digit}/>
                 </div>
-                <button type="submit"></button>
+                <button type="submit">Adicionar</button>
             </form>
         </div>
     )
