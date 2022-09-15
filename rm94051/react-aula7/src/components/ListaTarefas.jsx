@@ -16,6 +16,16 @@ export default function ListaTarefas() {
         }
     ])
 
+    const addTarefa = ()=>{
+        const novaTarefa = {
+            titulo:"Planilha de Sálarios",
+            setor:"Dep. Pessoal",
+            descricao: "Gerar planilhas",
+        }
+        setTarefa([...tarefa, novaTarefa])
+
+    }
+
   return (
     <DivLista>
         {tarefa.map((tar, i)=>(
@@ -26,6 +36,7 @@ export default function ListaTarefas() {
                 descricao={tar.descricao}
             />
         ))}
+        <button onClick={addTarefa}>Adicionar</button>
     </DivLista>
   )
 }
