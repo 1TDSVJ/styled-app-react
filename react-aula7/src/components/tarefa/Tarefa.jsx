@@ -1,12 +1,13 @@
 import React from 'react'
 import { DivTarefa } from '../../style/styled'
 
-export default function Tarefa() {
+const Tarefa = (props) => {
   return (
     <DivTarefa>
-        <h2>Relatório de venda</h2>
-        <p>Para: Departamento de vendas</p>
-        <p>Levantar os valores das vendas deste mês.</p>
+        <h2>{props.titulo}</h2>
+        <p>Para: {props.setor}</p>
+        <p>{props.descricao}</p>
     </DivTarefa>
   )
 }
+export default Tarefa;
