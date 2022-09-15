@@ -1,5 +1,6 @@
 import React from 'react'
 import { DivTarefa } from '../../style/styled'
+import { FaTrashAlt as X} from 'react-icons/fa'
 
 export default function Tarefa() {
   
