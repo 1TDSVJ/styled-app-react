@@ -1,5 +1,5 @@
 import React from 'react';
-import { DivTarefa } from '../../style/styled';
+import { Botao, DivTarefa } from '../../style/styled';
 
 export default function Tarefa(props) {
   return (
@@ -7,6 +7,7 @@ export default function Tarefa(props) {
       <h2>{props.titulo}</h2>
       <p>Para: {props.setor}</p>
       <p>{props.descricao}</p>
+      <Botao>Fechar</Botao>
     </DivTarefa>
   );
 }
