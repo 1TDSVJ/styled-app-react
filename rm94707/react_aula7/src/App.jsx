@@ -1,14 +1,10 @@
-import './App.css'
 import React from 'react'
-import ListaTarefas from './components/ListaTarefas'
+import MainRoutes from './routes/MainRoutes'
 
-function App() {
-  return (
-    <div>
-      <h1>ESTUDO COM STYLED COMPONENTS</h1>
-      <ListaTarefas/>
-    </div>
-  )
+export default function App(){
+    return(
+        <div>
+            <MainRoutes/>
+        </div>
+    )
 }
-
-export default App

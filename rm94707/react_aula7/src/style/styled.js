@@ -1,13 +1,13 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-// CRIANDO MÓDULO STYLED
-export const DivLista = styled.div` 
-     width: 100%;
-     padding: 20px;
-     min-height: 85vh;
-     background-color: #ccc;
-     display: flex; flex-wrap: wrap;
-     justify-content: space-around;
+//    CRIANDO MÓDULO STYLED
+export const DivLista = styled.div`
+    width: 100%;
+    padding: 20px;
+    min-height: 85vh;
+    background-color: #ccc;
+    display: flex; flex-wrap: wrap;
+    justify-content: space-around;
 `
 
 export const DivTarefa = styled.div`
@@ -19,5 +19,7 @@ export const DivTarefa = styled.div`
     width: 350px;
     height: 200px;
     margin: 10px;
+    position: relative;
     h2,p{ padding-bottom: 10px; }
+    button{position: absolute; top: 10px; right: 10px;}
 `
