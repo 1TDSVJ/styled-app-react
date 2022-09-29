@@ -19,7 +19,7 @@ export default function FormTarefas(props) {
             cols='30'
             rows='10'
             placeholder='Descrição...'
-            value={props.novaTarefa.title} onChange={props.funcCaptura}></textarea>
+            value={props.novaTarefa.descricao} onChange={props.funcCaptura}></textarea>
         </div>
         <div>
             <button type='submit'>Adicionar</button>
